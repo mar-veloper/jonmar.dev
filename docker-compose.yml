@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  jonmar.dev:
+    build:
+      context: ./
+    container_name: jonmar.dev
+    restart: 'unless-stopped'
+
+networks:
+  default:
+    external:
+      name: nginx-proxy-manager_default
