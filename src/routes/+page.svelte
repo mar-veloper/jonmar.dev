@@ -1,0 +1,25 @@
+<script lang="ts">
+	import avatar from '$lib/assets/images/avatar-v2.png';
+</script>
+
+<div class="flex flex-col items-start relative mb-10">
+	<div class="text-right w-2/4 opacity-75 absolute top-[32vw] right-0 hover:mask-half-1">
+		<img src={avatar} alt="jonmar" />
+		<h2 class="text-[2vw] font-bold">Jonmar Montaniel</h2>
+		<h3 class="text-[1.6vw] font-md">Software Developer</h3>
+	</div>
+
+	<p class="text-[8.5vw] xl:text-[136px] font-bold w-3/4 opacity-80 pb-8">
+		I really enjoy solving digital problems and absolutely love being involved in every step of
+		bringing a product to life. It's just so satisfying from start to finish!
+	</p>
+	<p class="text-[4.25vw] font-bold w-3/4 opacity-80 z-10 pb-8">
+		At the moment, I'm actively expanding my knowledge in Java, while also refining my skills in
+		data structures, algorithms, and design patterns.
+	</p>
+	<p class="text-[2vw] font-bold w-3/4 opacity-80 z-10">
+		I'm a self-taught developer with more than three years under my belt. I've been diving deep into
+		the frontend world, focusing on JavaScript, TypeScript, and Next.js. I'm all about crafting
+		user-friendly interfaces that just work.
+	</p>
+</div>
