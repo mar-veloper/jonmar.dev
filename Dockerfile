@@ -8,4 +8,4 @@ COPY . .
 RUN bun run build
 
 EXPOSE 3000
-ENTRYPOINT ["bun", 'run', "preview"]
+ENTRYPOINT ["bun", "run", "preview"]

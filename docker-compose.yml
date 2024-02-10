@@ -4,7 +4,7 @@ services:
   portfolio:
     build:
       context: .
-    container_name: jonmar.dev
+    container_name: portfolio
     restart: 'unless-stopped'
 
 networks:
