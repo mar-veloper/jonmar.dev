@@ -6,13 +6,13 @@ export default {
 			{
 				appLight: {
 					...require('daisyui/src/theming/themes')['cupcake'],
-					success: '#39cccc'
+					primary: '#39cccc'
 				}
 			},
 			{
 				appDark: {
 					...require('daisyui/src/theming/themes')['forest'],
-					success: '#39cccc'
+					primary: '#39cccc'
 				}
 			}
 		]

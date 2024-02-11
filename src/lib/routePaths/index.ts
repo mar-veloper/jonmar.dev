@@ -2,7 +2,7 @@ const routePaths = {
 	home: '/',
 	posts: '/posts',
 	works: '/works',
-	experiences: '/experiences'
+	experience: '/experience'
 };
 
 type RouterPathType = { [key: string]: string };

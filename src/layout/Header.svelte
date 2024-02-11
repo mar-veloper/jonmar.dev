@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Logo from '$lib/assets/logo/logo-cyan-v3.png';
-	import routerPath from '$lib/routePaths';
 	import classNames from 'classnames';
 	import ThemeSwitch from './ThemeSwitch.svelte';
+	import routePaths from '$lib/routePaths/index.js';
 
 	let activePath: string;
-	let routerPathTyped = routerPath;
+	let routerPathTyped = routePaths;
 
 	$: paths = Object.keys(routerPathTyped);
 
@@ -31,15 +31,15 @@
 			{#each paths as path}
 				<li
 					class={classNames({
-						'divider divider-success w-1/4 transition-all': true,
+						'divider divider-primary w-1/4 transition-all': true,
 						'w-full': activePath === routerPathTyped[path]
 					})}
 				>
 					<a
 						href={activePath === routerPathTyped[path] ? null : routerPathTyped[path]}
 						class={classNames({
-							'p-1 border-x-2 hover:border-success': true,
-							'border-y-0 border-x-2 border-success text-success cursor-default':
+							'p-1 border-x-2 hover:border-primary': true,
+							'border-y-0 border-x-2 border-primary text-primary cursor-default':
 								activePath === routerPathTyped[path]
 						})}>{path}</a
 					>
@@ -47,7 +47,7 @@
 			{/each}
 			<li
 				class={classNames({
-					'divider divider-success transition-all': true
+					'divider divider-primary transition-all': true
 				})}
 			>
 				<ThemeSwitch />

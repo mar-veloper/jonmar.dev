@@ -2,7 +2,7 @@
 	"name": "new-portfolio",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "bunx --bun vite --port 3002",
+		"dev": "bunx --bun vite --port 3002 --host",
 		"build": "bunx --bun vite build",
 		"preview": "vite preview --port 3002 --host",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
