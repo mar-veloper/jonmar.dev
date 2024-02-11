@@ -17,12 +17,14 @@
 	export let isLast: boolean | undefined = false;
 	export let isImgFull: boolean | undefined = false;
 	export let link: string | undefined;
+	export let index: number;
 </script>
 
 {#if isFirst}
 	<hr
 		class={classNames({
-			'bg-primary': !isFirst,
+			'h-[110%] z-0': true,
+			'bg-primary h-[110%]': !isFirst,
 			'bg-orange-300 opacity-75': isFirst
 		})}
 	/>
@@ -32,21 +34,28 @@
 	<CheckIcon fill={isFirst ? 'rgb(253, 186, 116)' : 'oklch(0.76172 0.089459 200.027)'} />
 </div>
 
-<div class="timeline-{position} opac mb-10 text-{position === 'start' ? 'right' : 'left'} w-full">
-	<time class="font-mono text-xl italic">{date}</time>
-	<h3 class="text-lg font-bold">{role}</h3>
-	<h4
+<div class="timeline-{position} mb-10 w-full">
+	<div
 		class={classNames({
-			'uppercase font-semibold text-md text-neutral-500 flex gap-1 justify-end': true,
-			'flex-row-reverse': position === 'end'
+			'flex flex-col justify-end': true,
+			'items-start md:items-end': index % 2 === 0
 		})}
 	>
-		<i>{tag}</i>
-		•
-		<a href={link} target="_blank" rel="noopener" class="text-primary hover:underline">
-			{company}</a
+		<time class="font-mono text-xl italic">{date}</time>
+		<h3 class="text-lg font-bold">{role}</h3>
+		<h4
+			class={classNames({
+				'uppercase font-semibold text-md text-neutral-500 flex gap-1 justify-end': true,
+				'flex-row-reverse': position === 'end'
+			})}
 		>
-	</h4>
+			<i>{tag}</i>
+			•
+			<a href={link} target="_blank" rel="noopener" class="text-primary hover:underline">
+				{company}</a
+			>
+		</h4>
+	</div>
 	<a href={link} target="_blank" rel="noopener" class="text-primary-500 underline">
 		<figure
 			class="bg-stone-100 mt-5 flex justify-center items-center border border-none w-full aspect-[16/9] hover:border-primary"
@@ -59,7 +68,8 @@
 {#if !isLast}
 	<hr
 		class={classNames({
-			'bg-primary': !isFirst,
+			'!h-[108%] z-0 mt-5': true,
+			'bg-primary ': !isFirst,
 			'bg-orange-300 opacity-75': isFirst
 		})}
 	/>
