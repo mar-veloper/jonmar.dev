@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Heading from '../../components/Heading.svelte';
-	import PostCard from './_components/PostCard.svelte';
+	import Heading from '../../components/Heading.svelte.js';
+	import PostCard from './_components/PostCard.svelte.js';
 </script>
 
 <Heading title="Post"
