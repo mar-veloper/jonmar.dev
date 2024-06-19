@@ -1,18 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+	darkMode: 'media',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	daisyui: {
 		themes: [
 			{
-				appLight: {
-					...require('daisyui/src/theming/themes')['cupcake'],
-					primary: '#39cccc'
+				appDark: {
+					...require('daisyui/src/theming/themes')['forest'],
+					primary: '#39cccc',
+					'.toggle.theme-controller': {
+						'background-color': 'oklch(0.837682 0.001658 17.9116)'
+					}
 				}
 			},
 			{
-				appDark: {
-					...require('daisyui/src/theming/themes')['forest'],
-					primary: '#39cccc'
+				appLight: {
+					...require('daisyui/src/theming/themes')['cupcake'],
+					primary: '#39cccc',
+					'.toggle.theme-controller': {
+						'background-color': 'oklch(0.8471 0.199 83.87)'
+					}
 				}
 			}
 		]

@@ -24,7 +24,7 @@
 	<hr
 		class={classNames({
 			'h-[110%] z-0': true,
-			'bg-primary h-[110%]': !isFirst,
+			'bg-orange-300 h-[110%]': !isFirst,
 			'bg-orange-300 opacity-75': isFirst
 		})}
 	/>
@@ -51,7 +51,11 @@
 		>
 			<i>{tag}</i>
 			•
-			<a href={link} target="_blank" rel="noopener" class="text-primary hover:underline">
+			<a href={link} target="_blank" rel="noopener" class={classNames({
+				'hover:underline text-primary': true,
+				'text-orange-300': isFirst
+			
+			})}>
 				{company}</a
 			>
 		</h4>

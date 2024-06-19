@@ -1,20 +1,30 @@
 <script lang="ts">
 	import Timeline from './_components/Timeline/Timeline.svelte';
-	import { waysLogo, saltLogo, wenetLogo, daytwoImg } from '$lib/assets/images/index.js';
+	import { waysLogo, wenetLogo, daytwoImg ,storebrandLogo, saltLogo} from '$lib/assets/images/index.js';
+	import Heading from '../../components/Heading.svelte';
 
 	const experiences = [
 		{
-			date: '2022 - Present',
+			date: 'July 2024 - Present',
+			role: 'In-House Software Developer',
+			company: 'Storebrand ASA',
+			tag: 'Fulltime',
+			imgUrl: storebrandLogo,
+			isFirst: true,
+			isImgFull: true,
+			link: 'https://storebrand.no'
+		},
+		{
+			date: 'May 2022 - June 2024',
 			role: 'Full-stack Developer',
 			company: 'Daytwo AS',
 			tag: 'Fulltime',
 			imgUrl: daytwoImg,
-			isFirst: true,
 			isImgFull: true,
 			link: 'https://daytwo.no'
 		},
 		{
-			date: '2020 - 2022',
+			date: 'February 2021 - April 2022',
 			role: 'Software Developer',
 			company: 'WAYS AS',
 			tag: 'Fulltime',
@@ -22,7 +32,23 @@
 			link: 'https://ways.no'
 		},
 		{
-			date: '2020',
+			date: 'September 2020 - January 2021',
+			role: 'Full-stack JavaScript Consultant',
+			company: 'School of applied technology',
+			tag: 'Fulltime',
+			imgUrl: saltLogo,
+			link: 'https://salt.dev'
+		},
+		{
+			date: 'April 2020 - August 2021',
+			role: 'Frontend Developer',
+			company: 'WAYS AS',
+			tag: 'Partime',
+			imgUrl: waysLogo,
+			link: 'https://ways.no'
+		},
+		{
+			date: 'January 2020 - August 2020',
 			role: 'Frontend Developer',
 			company: 'Wenet AS',
 			tag: 'Partime',
@@ -37,17 +63,12 @@
 	}
 </script>
 
-<div class="md:relative">
-	<h1 class="text-[10vw] font-bold xl:text-[140px]">Experience</h1>
-
-	<p
-		class="mb-5 md:absolute md:top-[15%] md:w-1/3 md:right-[5%] md:font-semibold md:text-[2vw] xl:text-[30px] xl:w-[500px] xl:right-[-100px]"
-	>
-		The journey so far has been very tough and challenging, but that what makes the destination even
-		worthy. Along the way I have met a lot of interesting, professional, smart and funny people. I
-		will always be grateful with them for all the opportunities and experiences I have had so far.
-	</p>
-</div>
+<Heading title="Experience">
+	The journey so far has been very tough and challenging, but that's what makes the destination even
+	more worthy. Along the way, I have met a lot of interesting, professional, smart, and funny
+	people. I will always be grateful to them for all the opportunities and experiences I have had so
+	far.
+</Heading>
 
 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
 	{#each experiences as experience, i}

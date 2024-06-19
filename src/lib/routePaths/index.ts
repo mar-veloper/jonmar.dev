@@ -1,7 +1,5 @@
 const routePaths = {
 	home: '/',
-	posts: '/posts',
-	works: '/works',
 	experience: '/experience'
 };
 
